@@ -119,7 +119,7 @@ the first few calls to \Call{Increment}{$A,k$} and evaluate the total number of 
 
 \begin{figure}[tbh]
 \centering
-\includegraphics[scale=1]{aggregate.pdf}
+\includegraphics[scale=1]{figures/aggregate.pdf}
 \caption{The process for Binary Counter operation.  The highlighted rows are those with  the most flipped bits. Total operations up to $i$th flipped bit is $2^i-1$.}
 \label{fig:aggregate}
 \end{figure}
@@ -130,7 +130,7 @@ An alternative approach, that gives us a simpler way to count the amortized cost
 total flips in that column.  Figure~\ref{fig:columns} illustrates how this approach lets us count the total operations needed to perform $n$ calls of \Call{Increment}{$A,k$}.
 \begin{figure}[tbh]
 \centering
-\includegraphics[scale=1]{columns.pdf}
+\includegraphics[scale=1]{figures/columns.pdf}
 \caption{Total cost by column in aggregated method.}
 \label{fig:columns}
 \end{figure}
@@ -186,7 +186,7 @@ illustrates how we save on low-cost operations and spend the savings on more cos
 flip a bit from `0' to `1', the actual cost is $1$ \$, but we allocated $2$ dollar coins which means we save extra dollar as credit in the account.  We place this extra coin on the bit that has just been flipped from `0' to '1'. In the future, we will use the coins saved on `1' bits, to flip them to `0' and newly charged coins to flip `0' bits to `1'. Thus, we will never spend more coins than our savings. Figure~\ref{fig:accounting} shows how our saving is spent during the steps where we face multiple flips. 
 \begin{figure}[tbh]
 \centering
-\includegraphics[scale=1]{accounting.pdf}
+\includegraphics[scale=1]{figures/accounting.pdf}
 \caption{Using Accounting method to perform amortized analysis on binary counter problem.}
 \label{fig:accounting}
 \end{figure}
@@ -226,7 +226,7 @@ Using aggregate analysis, we can look at the cost of each step in Figure~\ref{fi
 
 \begin{figure}[tbh]
 \centering
-\includegraphics[scale=0.5]{dynamic}
+\includegraphics[scale=0.5]{figures/dynamic}
 \caption{The status of the dynamic array as we insert elements into it.}
 \label{fig:dynamic}
 \end{figure}
@@ -264,7 +264,7 @@ Thus, we can charge $\hat{c}_i = 3 = O(1)$ coins for each insertion and we will 
 
 \begin{figure}[tbh]
 \centering
-\includegraphics[scale=0.5]{dynamicaccounting}
+\includegraphics[scale=0.5]{figures/dynamicaccounting}
 \caption{The coins accumulation account for the dynamic array insertion problem.}
 \label{fig:dynamicaccounting}
 \end{figure}
@@ -315,7 +315,7 @@ Let's define $t_i$ be the total 1's that were flipped to 0's during the $i$th ca
 We see that $t_i$ is the number of consecutive least significant bits that were 1's and were flipped to 0's. 
 \begin{figure}[tbh]
 \centering
-\includegraphics[scale=1]{potential.pdf}
+\includegraphics[scale=1]{figures/potential.pdf}
 \caption{Example of the $\Phi$ potential value for the binary counter problem}
 \label{fig:potential}
 \end{figure}
